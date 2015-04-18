@@ -1,0 +1,948 @@
+/**
+* Root
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    background-color: transparent;
+}
+/**
+* Font normalization inspired by YUI Library's fonts.css: developer.yahoo.com/yui/
+*/
+body { 
+	font:13px/1.231 sans-serif; *font-size:small; 
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+blockquote, q { 
+	quotes: none; 
+}
+
+blockquote:before, blockquote:after, q:before, q:after { 
+	content: ""; 
+	content: none; 
+}
+
+ins { 
+	background-color: #ff9; 
+	color: #000; 
+	text-decoration: none; 
+}
+
+mark { 
+	background-color: #ff9; 
+	color: #000; 
+	font-style: italic; 
+	font-weight: bold; 
+}
+
+del { 
+	text-decoration: line-through; 
+}
+
+abbr[title], dfn[title] { 
+	border-bottom: 1px dotted; cursor: help; 
+}
+
+table { 
+	border-collapse: collapse; 
+	border-spacing: 0; 
+}
+
+hr { 
+	display: block; 
+	height: 1px; 
+	border: 0; 
+	border-top: 1px solid #ccc; 
+	margin: 1em 0; 
+	padding: 0; 
+}
+
+input, select { 
+	vertical-align: middle; 
+}
+
+
+select, input, textarea, button { 
+	font:99% sans-serif; 
+}
+
+/* Normalize monospace sizing:
+en.wikipedia.org/wiki/MediaWiki_talk:Common.css/Archive_11#Teletype_style_fix_for_Chrome */
+pre, code, kbd, samp { 
+	font-family: monospace, sans-serif; 
+}
+
+/**
+* Minimal base styles.
+*/
+/* Always force a scrollbar in non-IE */
+html { 
+	overflow-y: scroll; 
+}
+
+/* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active { 
+	outline: none; 
+}
+
+ul, ol { 
+	margin-left: 2em; 
+}
+
+ol { 
+	list-style-type: decimal; 
+}
+
+small { 
+	font-size: 85%; 
+}
+
+strong, th { 
+	font-weight: bold; 
+}
+
+td { 
+	vertical-align: top; 
+}
+
+/* Set sub, sup without affecting line-height: gist.github.com/413930 */
+sub, sup { 
+	font-size: 75%; line-height: 0; position: relative; 
+}
+
+sup { 
+	top: -0.5em; 
+}
+
+sub { 
+	bottom: -0.25em; 
+}
+
+pre {
+    white-space: pre; 
+	white-space: pre-wrap; 
+	word-wrap: break-word;
+    padding: 15px;
+}
+
+textarea { 
+	overflow: auto; 
+}
+ 
+/* Align checkboxes, radios, text inputs with their label by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
+input[type="radio"] { 
+	vertical-align: text-bottom; 
+}
+
+input[type="checkbox"] { 
+	vertical-align: bottom; 
+}
+
+/* Hand cursor on clickable input elements */
+label, input[type="button"], input[type="submit"], input[type="image"], button { 
+	cursor: pointer; 
+}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea { 
+	margin: 0; 
+}
+
+/* Colors for form validity */
+input:valid, textarea:valid   { 
+ }
+
+input:invalid, textarea:invalid {
+	border-radius: 1px; 
+	-moz-box-shadow: 0px 0px 5px red; 
+	-webkit-box-shadow: 0px 0px 5px red; 
+	box-shadow: 0px 0px 5px red;
+}
+
+.no-boxshadow input:invalid, .no-boxshadow textarea:invalid { 
+	background-color: #f0dddd; 
+}
+
+/* These selection declarations have to be separate
+No text-shadow: twitter.com/miketaylr/status/12228805301
+Also: hot pink! */
+::-moz-selection{ 
+	background: #000000; 
+	color:#fff; 
+	text-shadow: none; 
+}
+
+::selection { 
+	background:#000000; 
+	color:#fff; 
+	text-shadow: none; 
+}
+
+/* j.mp/webkit-tap-highlight-color */
+a:link { 
+	-webkit-tap-highlight-color: #888A13; 
+}
+
+/* Make buttons play nice in IE:
+www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
+button {  
+	width: auto; 
+	overflow: visible; 
+}
+
+/**
+* You might tweak these..
+*/
+body, select, input, textarea {
+	color: #444;
+
+/* Set your base font here, to apply evenly */
+/* font-family: Georgia, serif;  */
+}
+
+/* Headers (h1, h2, etc) have no default font-size or margin; define those yourself */
+h1, h2, h3, h4, h5, h6 { 
+	font-weight: bold; 
+}
+
+a, a:active, a:visited { 
+	color: #888A13; 
+	text-decoration: none; 
+	background-color: transparent;
+}
+
+a:hover { 
+	color: #888A13;
+	text-decoration: underline; 
+}
+
+strong, b {
+	font-weight: bold;
+}
+
+i, cite, em, var, address, dfn { 
+	font-style: italic; 
+}
+
+.hidden { 
+    display: none; 
+    visibility: hidden; 
+}
+
+/* The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements.
+j.mp/bestclearfix */
+
+.clearfix:before, .clearfix:after { 
+	content: "\0020"; 
+	display: block; 
+	height: 0; overflow: hidden; 
+}
+
+
+.clearfix:after { 
+	clear: both; 
+}
+
+/* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+.clearfix { 
+	zoom: 1; 
+}
+
+body{ 
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	background: #ffffff url('../images/bg-trending.png') fixed; 
+}
+
+body:before {
+	content: "";
+	position: fixed;
+	background: #242326;
+	left: 0;
+	right: 0;
+	height: 5px;
+	z-index:3000;
+}
+
+img.frame{
+	background:#fff;
+	padding:1px;
+	border:1px solid #ddd;
+    -moz-box-shadow: 0px 0px 4px 1px #ececec;
+    -webkit-box-shadow: 0px 0px 4px 1px #ececec;
+    box-shadow: 0px 0px 4px 1px #ececec;		
+}
+
+img.icon{
+	width:32px;
+	height:32px;
+	float:left;
+	margin-right: 10px;
+}
+
+.error{
+	margin: 0px auto;
+	overflow: hidden;
+	clear:both;	
+}
+
+.error img{
+	padding:1px;
+	border:1px solid #ddd;
+    -moz-box-shadow: 0px 0px 4px 1px #ececec;
+    -webkit-box-shadow: 0px 0px 4px 1px #ececec;
+    box-shadow: 0px 0px 4px 1px #ececec;	
+}
+
+.error h1{
+	font-size: 35px;
+}
+
+.error h2{
+	font-size: 16px;
+}
+
+.error .info{
+	max-width: 620px;
+	padding-left:10px;
+}
+
+/* Menu 
+-------------------------------------------------------------- */
+
+#menu-icon {
+	display: hidden;
+	width: 40px;
+	height: 40px;
+	margin-top:0px;
+	background: #C2B38F url(../images/menu-icon.png) center;
+}
+
+a:hover#menu-icon {
+	background-color: #C2B38F;
+	border-radius: 4px 4px 0 0;
+}
+
+nav {
+	margin-top:5px;
+	text-align: right;
+	float: right;
+	font-size:11px;
+	border-top:#211f1c 1px solid;
+	border-bottom:#211f1c 1px solid;
+	overflow: hidden;
+	display:block;
+	width:100%;
+}
+
+nav ul{
+	list-style:none;
+	padding:0;
+	margin:0;
+	line-height:15px;
+}
+
+nav ul li {
+  	display:inline;
+  	text-align: center;
+}
+
+nav ul li a {
+	float:left;
+	text-decoration:none;
+	text-transform:uppercase;
+	width:20%;
+	line-height:15px;
+	padding:5px 0;
+	color:#000000 !important;	
+	-o-transition:color .2s ease-out, background .5s ease-in;
+	-ms-transition:color .2s ease-out, background .5s ease-in;
+	-moz-transition:color .2s ease-out, background .5s ease-in;
+	-webkit-transition:color .2s ease-out, background .5s ease-in;
+	transition:color .2s ease-out, background .5s ease-in;
+}
+
+nav .current a, nav ul li a:hover {
+	background:#C2B38F;
+	color:#ffffff !important;
+	text-decoration:none;
+}
+
+/* Main style starts now*/
+
+/* Header 
+-------------------------------------------------------------- */
+
+#header{
+	padding-top: 20px;
+}
+
+#header .content{
+	padding: 0px;
+	display:table;
+}
+
+#header .logo{
+	vertical-align:middle;
+	display:table-cell;
+	width:260px;
+	padding-right:20px;
+}
+
+#header .menu{
+	display:table-cell;
+	width:100%;
+}
+
+/* Main
+-------------------------------------------------------------- */
+
+#main{
+	text-align: left;
+	clear: both; 
+	margin-left: 0px;
+}
+
+.block{
+	margin: 0px;
+	padding:40px 0px 40px 0px;
+	clear:both;
+	overflow: hidden;
+}
+
+.content{
+	margin: 0px auto;
+  	max-width: 990px;
+	overflow: hidden;
+	clear:both;
+}
+
+.bgBlack{
+	background-color:#211f1c;
+	color: #ddd;
+}
+
+.bgBlack h2{
+	color: #ffffff;
+}
+
+.bgWhite{	
+	color: #181818;
+}
+
+.bgWhite h2{
+	color: #000000;
+}
+
+.col {
+    float:left;
+    width:auto;
+    max-width:310px;
+    margin: 5px 5px 15px 5px;
+    padding: 5px;
+}
+
+.col h2 {
+    display:block;
+    font-weight: normal;
+    letter-spacing: -0.5px;
+    font-size: 20px;
+    line-height: 30px;
+    padding:10px 0px;
+    margin-bottom:15px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+	border-bottom-style: solid;
+	border-bottom-color: #444;
+	border-bottom-width: 1px;
+}
+
+.col img.services{
+	width:250px;
+	height:333px;
+}
+.col p{
+	margin-top:5px;
+}
+/* Slider
+-------------------------------------------------------------- */
+.slider{
+	padding:20px 1px 40px 1px;
+	color:#fff;
+}
+
+.slider .slides {
+	
+}
+
+.slider .caption {
+	
+}
+	
+.slider .banner {
+	background: rgba(255,255,255,0.5); 
+	padding:5px;
+	height:45px;
+	line-height: 45px;
+	text-shadow: 1px 1px #A8A8A8;
+	color:#000000;
+	font-size: 20px;
+}
+
+.slider .banner img{
+	width:32px;
+	vertical-align:middle;
+}
+
+.slider .banner span{
+	vertical-align:middle;
+}
+
+.slider .circle {
+  width:120px;
+}
+
+.slider .circle:hover:after {
+    background: rgba(0,0,0,0.5);
+}
+
+.slider .circle:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height:0;
+    padding-bottom: 100%;
+    background: rgba(0,0,0,0.7); 
+    -moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    border-radius: 50%;
+}
+
+.slider .circle div {
+    float:left;
+    width:100%;
+    padding-top:50%;
+    line-height:1em;
+    margin-top:-1em;
+    text-align:center;
+    font-size:14px;
+    color:#fff;
+}
+
+.slider .circle div:hover {
+  font-size:16px;
+}
+
+/* Services 
+-------------------------------------------------------------- */
+.services{
+	width:100%;	
+}
+
+.services .details{
+	width:100%;
+	max-width:750px;
+}
+
+.services .right{
+	width:100%;
+	max-width:170px;
+	text-align: center;
+}
+
+/* Contact 
+-------------------------------------------------------------- */
+.contact{
+	margin-bottom:25px;
+}
+
+.contact .left{
+	max-width: 360px;
+	width:100%;
+}
+
+.contact .right{
+	max-width: 590px;
+	width:100%;
+}
+
+#map_canvas {
+  width: 590px;
+  height: 220px;
+  border:#000000 1px solid;
+}
+
+
+/* News 
+-------------------------------------------------------------- */
+.news{
+	overflow: hidden;
+}
+.news .col div{
+	vertical-align: middle;
+	margin:0px auto;
+}
+
+.news .left{
+	max-width:300px;
+	text-align:center;
+}
+
+.news .left img{
+	width:300px;
+	border:#000 1px solid;
+}
+
+.news .details{
+	max-width:600px;
+}
+
+/* Footer 
+-------------------------------------------------------------- */
+#footer{
+    background-color: #211f1c;
+    color:#959494;
+}
+
+#footer .col{
+	max-width:470px;
+	width: 100%;
+}
+
+#footer h2{
+	border-bottom-style: dashed;
+	border-bottom-color: #444;
+	border-bottom-width: 1px;
+}
+
+#footer .contact div{
+	float: left;
+	margin-right:30px;
+}
+
+#copyright{
+    clear:both;
+    padding:5px 0px;
+	border-top-style: dashed;
+	border-top-color: #444;
+	border-top-width: 1px;
+}
+
+#copyright p{
+    color:white;
+    font-size: 11px;
+    margin:10px 30px 10px 5px;;
+    text-align:center;
+}
+
+#copyright a{
+	color:white;
+}
+
+#copyright a:hover{
+  color:#888A13;
+  text-decoration: none;
+}
+
+#copyright .divider{
+	font-size:90%;
+}
+
+/* Gallery
+ --------------------------------------------------- */
+
+#tile_container{
+	margin: 0px auto;
+	width:600px;
+	float:right;
+	padding-right:10px;
+}
+
+.tile{
+	width:120px;
+	height:160px;
+	display: inline-block;
+	padding:0px;
+	margin-bottom:-3px;
+	overflow:hidden;
+}
+
+.tile img:hover{
+	width:150px;
+	height:200px;
+	-webkit-filter: grayscale(0%);
+	filter: grayscale(0%);
+}
+
+.tile img{
+	display:block;
+	width:120px;
+	height:160px;
+  	-webkit-filter: grayscale(100%);
+  	filter: grayscale(100%);  	
+  	-webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+/**
+* Media queries for responsive design.
+*
+* These follow after primary styles so they will successfully override.
+*/
+
+@media only screen and (max-width: 768px) {
+/* Main
+ --------------------------------- */	
+ 	.block{
+		padding:20px 0px;
+	}
+	
+	.content .category {
+		max-width: 230px;
+	}
+
+	.error .info{
+		max-width: 430px;
+	}	
+/* Slider
+ --------------------------------- */
+	.slider{
+		padding:10px 0px 0px 0px;
+	}
+
+/* Services 
+---------------------------------- */
+	.services{
+		max-width:730px;	
+	}
+	
+	.services h2{
+		font-size:14px;
+		line-height: 15px;
+	}
+	
+	.services .details{
+		max-width:520px;
+	}
+	
+	.services .right{
+		max-width:140px;
+	}
+/* Contact 
+------------------------------ */
+	.contact{
+		
+	}
+	
+	.contact .left{
+		max-width: 350px;
+	}
+	
+	.contact .right{
+		max-width: 350px;
+	}
+	
+	.contact .right img{
+		width: 350px;
+	}
+		
+	#map_canvas {
+	  width: 350px;
+	  height: 200px;
+	}
+	
+/* News 
+----------------------------------- */
+	.news .left, .news .details{
+		float:none;
+		max-width: 100%;
+	}
+	
+/* Gallery 
+----------------------------------- */
+	#tile_container{
+		width:400px;
+		padding-left:20px;
+	}
+		
+/* Footer
+ --------------------------------- */
+	#footer .col{
+		max-width:360px;
+		width: auto;
+	}
+	
+	#footer .contact div:first-child{
+		margin-right:20px;
+	}
+}
+
+/* MEDIA QUERY 640px - iphone 5, 5s
+ ------------------------------------*/
+
+@media only screen and (max-width: 640px) {
+/* Menu 
+------------------------------------*/
+	#menu-icon {
+		display:inline-block;
+		vertical-align:middle;
+		border-radius: 4px;
+		margin-right:15px;
+	}
+	
+	nav {
+		border-top:none;
+		border-bottom:none;
+		margin-top:0px;
+	}
+	
+	nav ul, nav:active ul { 
+		z-index:3000;
+		display: none;
+		position: absolute;
+		padding: 20px;
+		background: #fff;
+		border: 5px solid #444;
+		right: 15px;
+		top: 60px;
+		width: 50%;
+		border-radius: 4px 0 4px 4px;
+	}
+
+	nav li {
+		text-align: center;
+		margin: 0;
+	}
+
+	nav:hover ul {
+		display: block;
+	}
+	
+	nav ul li a {
+		width:100%;
+		max-width:320px;
+		padding: 20px 0;
+	}
+
+/* Main
+ --------------------------------- */	
+	.col, .content .category {
+		max-width: 100%;
+	}
+	
+	.col h2{
+	    font-size: 16px;
+	    line-height: 16px;		
+	}
+		
+	.error h1{
+		font-size: 25px;
+	}
+	
+	.error h2{
+		font-size: 14px;
+	}
+	
+	.error .info{
+		max-width: 310px;
+	}
+
+	
+/* Footer
+ --------------------------------- */
+	#footer .col{
+		max-width:100%;
+		float:none;
+	}
+	
+	#copyright p span{
+	    display: block;
+	}
+	
+	#copyright .divider{
+		display:none;
+	}
+}
+
+
+
+/* Grade-A Mobile Browsers (Opera Mobile, Mobile Safari, Android Chrome)*/
+
+@media only screen and (max-width: 320px) {
+/* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
+/* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
+
+/* Main
+ --------------------------------- */	
+	.col {
+		max-width: 300px;	
+	}
+	
+/* Services 
+---------------------------------- */
+	.services{
+		max-width:320px;	
+	}
+	
+	.services h2{
+		font-size:14px;
+		line-height: 15px;
+	}
+	
+	.services .details{
+		max-width:300px;
+	}
+	
+	.services .right{
+		max-width:300px;
+	}
+	
+/* Contact 
+------------------------------ */
+	.contact{
+		
+	}
+	
+	.contact .left{
+		max-width: 300px
+	}
+	
+	.contact .right{
+		max-width: 300px;
+	}
+	
+	.contact .right img{
+		width: 300px;
+	}
+		
+	#map_canvas {
+	  width: 300px;
+	  height: 200px;
+	}
+
+/* Gallery 
+----------------------------------- */
+	#tile_container{
+		width:300px;
+	}
+}
+
+
